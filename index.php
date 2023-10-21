@@ -32,28 +32,18 @@ if(isset($_POST['login'])){
         //jika tidak di temukan
         echo 'Data tidak ditemukan';
     }
-    // if(!isset($_SESSION['log'])){
-    //     // header('location:index.php');
-    // }else{
-    //     $ambildata = mysqli_fetch_array($cekDatabase);
-    //     $role = $ambildata['role'];
-
-    //     if($role=='admin'){
-    //         //jika admin
-    //         $_SESSION['log'] = 'True';
-    //         $_SESSION['role'] = 'Admin';
-    //         header('location:admin');
-    //     }else{
-    //         //jika bukan admin
-    //         $_SESSION['log'] = 'True';
-    //         $_SESSION['role'] = 'User';
-    //         header('location:user');
-
-    //     }
-    // }
+    
 };
 
+if(isset($_SESSION['log'])&&$_SESSION['role']=='Admin'){
+    header('location:admin');
 
+    } elseif(isset($_SESSION['log'])&&$_SESSION['role']=='User'){    
+    header('location:user');
+        
+    }else{
+
+    }
 
 ?>
 
@@ -67,7 +57,9 @@ if(isset($_POST['login'])){
         <meta name="author" content="" />
         <title>Login</title>
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="icon" type="image/png" href="assets/img/berlianbulat.png">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        
     </head>
     <body class="bg-primary">
         <div id="layoutAuthentication">
@@ -77,7 +69,10 @@ if(isset($_POST['login'])){
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                    
+                                    <img class="img-fluid logo mx-auto" src="assets/img/berlian.png" alt="Logo Perusahaan" style="width: 4rem; height: 4.5rem; padding-top: 15px;">
+
+                                    <div class="card-header"><h3 class="text-center  font-weight-light my-4">Login BerlianTeknologi.net</h3></div>
                                     <div class="card-body">
                                         <form method="post">
                                             <div class="form-group">
@@ -88,14 +83,13 @@ if(isset($_POST['login'])){
                                                 <label class="small mb-1" for="inputPassword">Password</label>
                                                 <input class="form-control py-4" name="password" id="inputPassword" type="password" placeholder="Enter password" required/>
                                             </div>
-                                            
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <button class="btn btn-primary" name="login">Login</button>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+                                        <div class="small">Semoga Hari Anda Menyenangkan!..</div>
                                     </div>
                                 </div>
                             </div>
