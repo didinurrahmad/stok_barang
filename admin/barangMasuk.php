@@ -39,15 +39,15 @@ require '../ceklog.php';
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">BARANG</div>
                             <a class="nav-link" href="index.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
                                 Stok Barang
                             </a>
                             <a class="nav-link" href="barangMasuk.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
                                 Barang Masuk
                             </a>
                             <a class="nav-link" href="barangKeluar.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
                                 Barang Keluar
                             </a>                    
                         </div>
